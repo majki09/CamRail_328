@@ -80,7 +80,8 @@ byte PCD_Line       ( byte x1, byte x2, byte y1, byte y2, LcdPixelMode mode );
 byte PCD_Rect       ( byte x1, byte x2, byte y1, byte y2, LcdPixelMode mode );
 byte PCD_SBar       ( byte baseX, byte baseY, byte height, byte width, LcdPixelMode mode );
 byte PCD_Bars       ( byte data[], byte numbBars, byte width, byte multiplier );
-void PCD_Int		( LcdFontSize size, uint16_t wart);
+void PCD_Int		( LcdFontSize size, uint16_t value);
+void PCD_IntF		( LcdFontSize size, uint16_t value);
 
 
 

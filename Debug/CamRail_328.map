@@ -57,8 +57,7 @@ Discarded input sections
  .text          0x00000000        0x0 main.o
  .data          0x00000000        0x0 main.o
  .bss           0x00000000        0x0 main.o
- .text.delay_ms8
-                0x00000000       0x1a main.o
+ .rodata.lang   0x00000000        0x1 main.o
  .rodata.camera_sleep_time
                 0x00000000        0x1 main.o
  .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodhi4.o)
@@ -291,7 +290,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000      0xff8
+.text           0x00000000      0xfa6
  *(.vectors)
  .vectors       0x00000000       0x68 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.209/gcc/dev/atmega328p/avr5/crtatmega328p.o
                 0x00000000                __vector_default
@@ -307,101 +306,87 @@ END GROUP
  *libprintf_flt.a:*(.progmem.data)
  *libc.a:*(.progmem.data)
  *(.progmem*)
+ .progmem.data.__c.2201
+                0x00000068        0x2 LCD_Nokia5110/pcd8544.o
+ .progmem.data.__c.2199
+                0x0000006a        0x2 LCD_Nokia5110/pcd8544.o
  .progmem.data.FontLookup
-                0x00000068      0x1c7 LCD_Nokia5110/pcd8544.o
- .progmem.data.__c.2099
-                0x0000022f        0x2 main.o
- .progmem.data.__c.2097
-                0x00000231        0xa main.o
- .progmem.data.__c.2095
-                0x0000023b        0x6 main.o
- .progmem.data.__c.2093
-                0x00000241        0x8 main.o
- .progmem.data.__c.2091
-                0x00000249        0x8 main.o
- .progmem.data.__c.2070
-                0x00000251        0x2 main.o
- .progmem.data.__c.2068
-                0x00000253        0x2 main.o
- .progmem.data.__c.2066
-                0x00000255        0x2 main.o
- .progmem.data.__c.2064
-                0x00000257        0x2 main.o
- .progmem.data.__c.2062
-                0x00000259        0x2 main.o
- .progmem.data.__c.2060
-                0x0000025b        0x2 main.o
- .progmem.data.__c.2058
-                0x0000025d        0x2 main.o
- .progmem.data.__c.2056
-                0x0000025f        0x2 main.o
- .progmem.data.__c.2054
-                0x00000261        0x2 main.o
- .progmem.data.__c.2052
-                0x00000263        0x2 main.o
- .progmem.data.__c.2050
-                0x00000265        0x2 main.o
- .progmem.data.__c.2048
-                0x00000267        0x2 main.o
- .progmem.data.__c.2046
-                0x00000269        0x2 main.o
- .progmem.data.__c.2044
-                0x0000026b        0x2 main.o
- .progmem.data.__c.2033
-                0x0000026d        0x2 main.o
- .progmem.data.__c.2031
-                0x0000026f        0x2 main.o
- .progmem.data.__c.2026
-                0x00000271        0x2 main.o
- .progmem.data.__c.2024
-                0x00000273        0x2 main.o
- .progmem.data.__c.2022
-                0x00000275        0x2 main.o
- .progmem.data.__c.2020
-                0x00000277        0x2 main.o
- .progmem.data.__c.2018
-                0x00000279        0x2 main.o
- .progmem.data.__c.2016
-                0x0000027b        0x2 main.o
- .progmem.data.__c.2014
-                0x0000027d        0x2 main.o
- .progmem.data.__c.2012
-                0x0000027f        0x2 main.o
- .progmem.data.__c.2010
-                0x00000281        0x3 main.o
- .progmem.data.__c.2008
-                0x00000284        0x2 main.o
- .progmem.data.__c.2006
-                0x00000286        0x2 main.o
-                0x00000288                . = ALIGN (0x2)
+                0x0000006c      0x1c7 LCD_Nokia5110/pcd8544.o
+ .progmem.data.__c.2085
+                0x00000233        0x2 main.o
+ .progmem.data.__c.2083
+                0x00000235        0xa main.o
+ .progmem.data.__c.2075
+                0x0000023f        0xa main.o
+ .progmem.data.__c.2073
+                0x00000249        0xb main.o
+ .progmem.data.__c.2071
+                0x00000254        0x8 main.o
+ .progmem.data.__c.2057
+                0x0000025c        0x2 main.o
+ .progmem.data.__c.2055
+                0x0000025e        0x2 main.o
+ .progmem.data.__c.2053
+                0x00000260        0x2 main.o
+ .progmem.data.__c.2051
+                0x00000262        0x2 main.o
+ .progmem.data.__c.2049
+                0x00000264        0x2 main.o
+ .progmem.data.__c.2047
+                0x00000266        0x2 main.o
+ .progmem.data.__c.2045
+                0x00000268        0x2 main.o
+ .progmem.data.__c.2043
+                0x0000026a        0x2 main.o
+ .progmem.data.__c.2032
+                0x0000026c        0x2 main.o
+ .progmem.data.__c.2030
+                0x0000026e        0x2 main.o
+ .progmem.data.__c.2025
+                0x00000270        0x2 main.o
+ .progmem.data.__c.2023
+                0x00000272        0x2 main.o
+ .progmem.data.__c.2021
+                0x00000274        0x2 main.o
+ .progmem.data.__c.2019
+                0x00000276        0x2 main.o
+ .progmem.data.__c.2017
+                0x00000278        0x2 main.o
+ .progmem.data.__c.2015
+                0x0000027a        0x2 main.o
+ .progmem.data.__c.2013
+                0x0000027c        0x2 main.o
+ .progmem.data.__c.2011
+                0x0000027e        0x2 main.o
+                0x00000280                . = ALIGN (0x2)
  *(.jumptables)
  *(.jumptables*)
  *(.lowtext)
  *(.lowtext*)
-                0x00000288                __ctors_start = .
+                0x00000280                __ctors_start = .
  *(.ctors)
-                0x00000288                __ctors_end = .
-                0x00000288                __dtors_start = .
+                0x00000280                __ctors_end = .
+                0x00000280                __dtors_start = .
  *(.dtors)
-                0x00000288                __dtors_end = .
+                0x00000280                __dtors_end = .
  SORT(*)(.ctors)
  SORT(*)(.dtors)
  *(.init0)
- .init0         0x00000288        0x0 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.209/gcc/dev/atmega328p/avr5/crtatmega328p.o
-                0x00000288                __init
+ .init0         0x00000280        0x0 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.209/gcc/dev/atmega328p/avr5/crtatmega328p.o
+                0x00000280                __init
  *(.init0)
  *(.init1)
  *(.init1)
  *(.init2)
- .init2         0x00000288        0xc C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.209/gcc/dev/atmega328p/avr5/crtatmega328p.o
+ .init2         0x00000280        0xc C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.209/gcc/dev/atmega328p/avr5/crtatmega328p.o
  *(.init2)
  *(.init3)
  *(.init3)
  *(.init4)
- .init4         0x00000294       0x16 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
-                0x00000294                __do_copy_data
- .init4         0x000002aa       0x10 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
-                0x000002aa                __do_clear_bss
+ .init4         0x0000028c       0x16 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
+                0x0000028c                __do_copy_data
+ .init4         0x000002a2       0x10 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
+                0x000002a2                __do_clear_bss
  *(.init4)
  *(.init5)
  *(.init5)
@@ -412,98 +397,101 @@ END GROUP
  *(.init8)
  *(.init8)
  *(.init9)
- .init9         0x000002ba        0x8 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.209/gcc/dev/atmega328p/avr5/crtatmega328p.o
+ .init9         0x000002b2        0x8 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.209/gcc/dev/atmega328p/avr5/crtatmega328p.o
  *(.init9)
  *(.text)
- .text          0x000002c2        0x4 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.209/gcc/dev/atmega328p/avr5/crtatmega328p.o
-                0x000002c2                __vector_22
-                0x000002c2                __vector_1
-                0x000002c2                __vector_24
-                0x000002c2                __vector_12
-                0x000002c2                __bad_interrupt
-                0x000002c2                __vector_6
-                0x000002c2                __vector_3
-                0x000002c2                __vector_23
-                0x000002c2                __vector_25
-                0x000002c2                __vector_11
-                0x000002c2                __vector_13
-                0x000002c2                __vector_17
-                0x000002c2                __vector_19
-                0x000002c2                __vector_7
-                0x000002c2                __vector_5
-                0x000002c2                __vector_4
-                0x000002c2                __vector_9
-                0x000002c2                __vector_2
-                0x000002c2                __vector_21
-                0x000002c2                __vector_15
-                0x000002c2                __vector_8
-                0x000002c2                __vector_10
-                0x000002c2                __vector_16
-                0x000002c2                __vector_18
-                0x000002c2                __vector_20
-                0x000002c6                . = ALIGN (0x2)
+ .text          0x000002ba        0x4 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.209/gcc/dev/atmega328p/avr5/crtatmega328p.o
+                0x000002ba                __vector_22
+                0x000002ba                __vector_1
+                0x000002ba                __vector_24
+                0x000002ba                __vector_12
+                0x000002ba                __bad_interrupt
+                0x000002ba                __vector_6
+                0x000002ba                __vector_3
+                0x000002ba                __vector_23
+                0x000002ba                __vector_25
+                0x000002ba                __vector_11
+                0x000002ba                __vector_13
+                0x000002ba                __vector_17
+                0x000002ba                __vector_19
+                0x000002ba                __vector_7
+                0x000002ba                __vector_5
+                0x000002ba                __vector_4
+                0x000002ba                __vector_9
+                0x000002ba                __vector_2
+                0x000002ba                __vector_21
+                0x000002ba                __vector_15
+                0x000002ba                __vector_8
+                0x000002ba                __vector_10
+                0x000002ba                __vector_16
+                0x000002ba                __vector_18
+                0x000002ba                __vector_20
+                0x000002be                . = ALIGN (0x2)
  *(.text.*)
- .text.PCD_Snd  0x000002c6       0x18 LCD_Nokia5110/pcd8544.o
+ .text.PCD_Snd  0x000002be       0x18 LCD_Nokia5110/pcd8544.o
  .text.PCD_Contr
-                0x000002de       0x22 LCD_Nokia5110/pcd8544.o
-                0x000002de                PCD_Contr
- .text.PCD_Clr  0x00000300       0x2a LCD_Nokia5110/pcd8544.o
-                0x00000300                PCD_Clr
+                0x000002d6       0x22 LCD_Nokia5110/pcd8544.o
+                0x000002d6                PCD_Contr
+ .text.PCD_Clr  0x000002f8       0x2a LCD_Nokia5110/pcd8544.o
+                0x000002f8                PCD_Clr
  .text.PCD_GotoXYFont
-                0x0000032a       0x44 LCD_Nokia5110/pcd8544.o
-                0x0000032a                PCD_GotoXYFont
- .text.PCD_Chr  0x0000036e      0x1c2 LCD_Nokia5110/pcd8544.o
-                0x0000036e                PCD_Chr
- .text.PCD_Str  0x00000530       0x3e LCD_Nokia5110/pcd8544.o
-                0x00000530                PCD_Str
+                0x00000322       0x44 LCD_Nokia5110/pcd8544.o
+                0x00000322                PCD_GotoXYFont
+ .text.PCD_Chr  0x00000366      0x1c2 LCD_Nokia5110/pcd8544.o
+                0x00000366                PCD_Chr
+ .text.PCD_Str  0x00000528       0x3e LCD_Nokia5110/pcd8544.o
+                0x00000528                PCD_Str
  .text.PCD_FStr
-                0x0000056e       0x38 LCD_Nokia5110/pcd8544.o
-                0x0000056e                PCD_FStr
- .text.PCD_Int  0x000005a6       0x46 LCD_Nokia5110/pcd8544.o
-                0x000005a6                PCD_Int
- .text.PCD_Upd  0x000005ec       0xcc LCD_Nokia5110/pcd8544.o
-                0x000005ec                PCD_Upd
- .text.PCD_Ini  0x000006b8       0x60 LCD_Nokia5110/pcd8544.o
-                0x000006b8                PCD_Ini
+                0x00000566       0x38 LCD_Nokia5110/pcd8544.o
+                0x00000566                PCD_FStr
+ .text.PCD_Int  0x0000059e       0x46 LCD_Nokia5110/pcd8544.o
+                0x0000059e                PCD_Int
+ .text.PCD_IntF
+                0x000005e4       0x3a LCD_Nokia5110/pcd8544.o
+                0x000005e4                PCD_IntF
+ .text.PCD_Upd  0x0000061e       0xcc LCD_Nokia5110/pcd8544.o
+                0x0000061e                PCD_Upd
+ .text.PCD_Ini  0x000006ea       0x60 LCD_Nokia5110/pcd8544.o
+                0x000006ea                PCD_Ini
  .text.delay_ms16
-                0x00000718       0x20 main.o
-                0x00000718                delay_ms16
+                0x0000074a       0x20 main.o
+                0x0000074a                delay_ms16
  .text.mega328p_config
-                0x00000738       0x3a main.o
-                0x00000738                mega328p_config
+                0x0000076a       0x3a main.o
+                0x0000076a                mega328p_config
  .text.PCD_labels_print
-                0x00000772       0x64 main.o
-                0x00000772                PCD_labels_print
- .text.main     0x000007d6      0x708 main.o
-                0x000007d6                main
+                0x000007a4       0x64 main.o
+                0x000007a4                PCD_labels_print
+ .text.main     0x00000808      0x684 main.o
+                0x00000808                main
  .text.__vector_14
-                0x00000ede       0x3e main.o
-                0x00000ede                __vector_14
+                0x00000e8c       0x3e main.o
+                0x00000e8c                __vector_14
  .text.libgcc.div
-                0x00000f1c       0x28 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodhi4.o)
-                0x00000f1c                __udivmodhi4
+                0x00000eca       0x28 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodhi4.o)
+                0x00000eca                __udivmodhi4
  .text.libgcc.div
-                0x00000f44       0x28 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_divmodhi4.o)
-                0x00000f44                _div
-                0x00000f44                __divmodhi4
+                0x00000ef2       0x28 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_divmodhi4.o)
+                0x00000ef2                _div
+                0x00000ef2                __divmodhi4
  .text.libgcc.mul
-                0x00000f6c       0x1e c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_umulhisi3.o)
-                0x00000f6c                __umulhisi3
+                0x00000f1a       0x1e c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_umulhisi3.o)
+                0x00000f1a                __umulhisi3
  .text.avr-libc
-                0x00000f8a       0x16 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(itoa_ncheck.o)
-                0x00000f8a                __itoa_ncheck
+                0x00000f38       0x16 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(itoa_ncheck.o)
+                0x00000f38                __itoa_ncheck
  .text.avr-libc
-                0x00000fa0       0x34 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(utoa_ncheck.o)
-                0x00000fa0                __utoa_ncheck
-                0x00000fa2                __utoa_common
+                0x00000f4e       0x34 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(utoa_ncheck.o)
+                0x00000f4e                __utoa_ncheck
+                0x00000f50                __utoa_common
  .text.avr-libc
-                0x00000fd4       0x20 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(strrev.o)
-                0x00000fd4                strrev
-                0x00000ff4                . = ALIGN (0x2)
+                0x00000f82       0x20 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(strrev.o)
+                0x00000f82                strrev
+                0x00000fa2                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00000ff4        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
-                0x00000ff4                _exit
-                0x00000ff4                exit
+ .fini9         0x00000fa2        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+                0x00000fa2                _exit
+                0x00000fa2                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -522,11 +510,11 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00000ff4        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .fini0         0x00000fa2        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x00000ff8                _etext = .
+                0x00000fa6                _etext = .
 
-.data           0x00800100        0x8 load address 0x00000ff8
+.data           0x00800100        0x8 load address 0x00000fa6
                 0x00800100                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
@@ -575,8 +563,8 @@ END GROUP
                 0x00800314                setne_sek_mcu
                 0x00800315                liczba_sekund
                 0x00800317                PROVIDE (__bss_end, .)
-                0x00000ff8                __data_load_start = LOADADDR (.data)
-                0x00001000                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x00000fa6                __data_load_start = LOADADDR (.data)
+                0x00000fae                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x00800317        0x0
                 [!provide]                PROVIDE (__noinit_start, .)
@@ -651,48 +639,48 @@ END GROUP
 .debug_aranges  0x00000000       0xe0
  *(.debug_aranges)
  .debug_aranges
-                0x00000000       0x98 LCD_Nokia5110/pcd8544.o
+                0x00000000       0xa0 LCD_Nokia5110/pcd8544.o
  .debug_aranges
-                0x00000098       0x48 main.o
+                0x000000a0       0x40 main.o
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x2298
+.debug_info     0x00000000     0x21c9
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x5f4 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.209/gcc/dev/atmega328p/avr5/crtatmega328p.o
- .debug_info    0x000005f4      0xb6c LCD_Nokia5110/pcd8544.o
- .debug_info    0x00001160     0x1138 main.o
+ .debug_info    0x000005f4      0xc05 LCD_Nokia5110/pcd8544.o
+ .debug_info    0x000011f9      0xfd0 main.o
 
-.debug_abbrev   0x00000000      0xae4
+.debug_abbrev   0x00000000      0xaed
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0x5a2 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.209/gcc/dev/atmega328p/avr5/crtatmega328p.o
  .debug_abbrev  0x000005a2      0x329 LCD_Nokia5110/pcd8544.o
- .debug_abbrev  0x000008cb      0x219 main.o
+ .debug_abbrev  0x000008cb      0x222 main.o
 
-.debug_line     0x00000000      0xf64
+.debug_line     0x00000000      0xf48
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000      0x133 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.209/gcc/dev/atmega328p/avr5/crtatmega328p.o
- .debug_line    0x00000133      0x762 LCD_Nokia5110/pcd8544.o
- .debug_line    0x00000895      0x6cf main.o
+ .debug_line    0x00000133      0x797 LCD_Nokia5110/pcd8544.o
+ .debug_line    0x000008ca      0x67e main.o
 
-.debug_frame    0x00000000      0x2d4
+.debug_frame    0x00000000      0x2e4
  *(.debug_frame)
- .debug_frame   0x00000000      0x250 LCD_Nokia5110/pcd8544.o
- .debug_frame   0x00000250       0x84 main.o
+ .debug_frame   0x00000000      0x270 LCD_Nokia5110/pcd8544.o
+ .debug_frame   0x00000270       0x74 main.o
 
-.debug_str      0x00000000      0x746
+.debug_str      0x00000000      0x74b
  *(.debug_str)
  .debug_str     0x00000000      0x208 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.209/gcc/dev/atmega328p/avr5/crtatmega328p.o
- .debug_str     0x00000208      0x38c LCD_Nokia5110/pcd8544.o
-                                0x3ca (size before relaxing)
- .debug_str     0x00000594      0x1b2 main.o
-                                0x39b (size before relaxing)
+ .debug_str     0x00000208      0x396 LCD_Nokia5110/pcd8544.o
+                                0x3d4 (size before relaxing)
+ .debug_str     0x0000059e      0x1ad main.o
+                                0x39f (size before relaxing)
 
-.debug_loc      0x00000000     0x1664
+.debug_loc      0x00000000     0x169d
  *(.debug_loc)
- .debug_loc     0x00000000     0x11f9 LCD_Nokia5110/pcd8544.o
- .debug_loc     0x000011f9      0x46b main.o
+ .debug_loc     0x00000000     0x1297 LCD_Nokia5110/pcd8544.o
+ .debug_loc     0x00001297      0x406 main.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -714,8 +702,8 @@ END GROUP
 
 .debug_ranges   0x00000000       0xc0
  *(.debug_ranges)
- .debug_ranges  0x00000000       0x88 LCD_Nokia5110/pcd8544.o
- .debug_ranges  0x00000088       0x38 main.o
+ .debug_ranges  0x00000000       0x90 LCD_Nokia5110/pcd8544.o
+ .debug_ranges  0x00000090       0x30 main.o
 
 .debug_macro
  *(.debug_macro)

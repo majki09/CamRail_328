@@ -1,12 +1,13 @@
 /*
- * Biblioteka dla LCD Nokia 3310 i innych
- * opartych o sterownik pcd8544.h
+ * C library for Nokia 3310 LCD and similiar LCDs
+ * based on pcd8544.h driver
  *
  * SunRiver
  *
- * przygotowane dla toolchaina ATMEL 3.4.x
+ * prepared for ATMEL 3.4.x toolchain
  *
- * - 01.10.2014 - dodano PCD_Int - Lukasz Majkut
+ * - 01.10.2014 - added PCD_Int - Lukasz Majkut
+ * - 02.05.2019 - added PCD_IntF - Lukasz Majkut
  */
 
 #include <avr/io.h>
@@ -261,12 +262,25 @@ byte PCD_FStr ( LcdFontSize size, const byte *dataPtr )
 // Wyswietla integer'a
 // Lukasz Majkut 01.10.2014
 
-void PCD_Int (LcdFontSize size, uint16_t wart)
+void PCD_Int (LcdFontSize size, uint16_t value)
 {
-	uint8_t int2str[8];
+	char int2str[8];
 
-	itoa(wart,int2str,10);
-	PCD_Str(size,(unsigned char*)int2str);
+	itoa (value, int2str, 10);
+	PCD_Str (size, (unsigned char*)int2str);
+}
+
+void PCD_IntF (LcdFontSize size, uint16_t value)
+{
+	// to do: use itoa / arrays operations for this
+	
+	if(value < 10)
+		PCD_FStr(FONT_1X,(unsigned char*)PSTR("0"));
+		
+	if(value < 100)
+		PCD_FStr(FONT_1X,(unsigned char*)PSTR("0"));
+		
+	PCD_Int(size, value);
 }
 
 // PCD_Pixel
